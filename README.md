@@ -22,14 +22,24 @@ preloaded=paths_to_preloaded_files_with_emails
 
 
 Type 'preload' to load pre-fetched addresses
+
 Type 'status' to get overview of loaded messages
+
 Type 'status detail' to get overview of loaded messages
+
 Type 'mail sender [sender]' to set mail subject
+
 Type 'mail subject [subject]' to set mail subject
+
 Type 'mail body [body]' to set mail subject (HTML supported)
+
 Type 'send' to send mail
+
 Type 'prev' to execute previous command
+
 Type 'log' to view command history
+
 Type 'quit' to exit,
-Type 'help' for this message :)
+
+Type 'help' for help :)
 
