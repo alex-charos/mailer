@@ -66,7 +66,7 @@ public class CommandManagerImpl extends ApplicationManager {
 				}
 				break;
 			case "send":
-				// throw new RuntimeException("Not implemented yet!");
+				send();
 				break;
 			case "log":
 				log();
@@ -87,6 +87,33 @@ public class CommandManagerImpl extends ApplicationManager {
 		System.out.println("Displaying Previous commands");
 		for (String command : getPreviousCommands()) {
 			System.out.println(command);
+		}
+	}
+	
+	public void send(){
+		int size = getEmails().size();
+		System.out.println(size + " Total Addresses: ");
+		int counter = 1;
+
+		
+		for (String email : getEmails()) {
+			System.out.println("Sending " + counter++ + " of " + size + " (" + email + ")");
+			mail.setRecipientEmail(email);
+
+			boolean sent = mailSender.sendMail(mail);
+			if (sent) {
+				System.out.println("Sent!");
+			} else {
+				System.out.println("Not Sent... Waiting for 5 seconds and trying again");
+				try {
+					Thread.sleep(5 * 1000);
+					sent = mailSender.sendMail(mail);
+					System.out.println("Not Sent... Giving up at :" + email);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+
 		}
 	}
 	
