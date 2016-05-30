@@ -12,11 +12,15 @@ execute with java -jar -DpropFile=$your_properties_file$ target/mailer*.jar
 Properties file needs the following info:
 
 mail.server=your_smtp_server
+
 mail.port=your_smtp_server_port
 
 mail.defaultSubject=default_subject(you can enter via the command prompt as well)
+
 mail.defaultBody=default_body(you can enter via the command prompt as well)
+
 mail.defaultSender=default_sender(you can enter via the command prompt as well)
+
 preloaded=paths_to_preloaded_files_with_emails
 
 
