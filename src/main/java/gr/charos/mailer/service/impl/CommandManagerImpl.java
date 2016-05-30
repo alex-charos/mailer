@@ -1,10 +1,5 @@
 package gr.charos.mailer.service.impl;
 
-import java.util.Deque;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
 import gr.charos.mailer.model.CommandResult;
 import gr.charos.mailer.model.Email;
 import gr.charos.mailer.service.AddressReader;
