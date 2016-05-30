@@ -21,7 +21,7 @@ mail.defaultBody=default_body(you can enter via the command prompt as well)
 
 mail.defaultSender=default_sender(you can enter via the command prompt as well)
 
-preloaded=paths_to_preloaded_files_with_emails
+preloaded=paths_to_preloaded_files_with_emails (optional)
 
 
 
