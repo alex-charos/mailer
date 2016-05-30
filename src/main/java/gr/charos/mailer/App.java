@@ -26,8 +26,23 @@ import gr.charos.mailer.service.impl.TextAddressExtractor;
 public class App {
 	public static void main(String[] args) {
 
-		
-		String propFile = System.getProperty("propFile") == null ? "config.properties" : System.getProperty("propFile");
+		if (args.length == 0) {
+			System.out.println("Usage: java -jar mailer*.jar $propFileLocation");
+			System.out.println("Sample config file : ");
+			System.out.println("mail.server=your_smtp_server\n" + 
+					"\n" + 
+					"mail.port=your_smtp_server_port\n" + 
+					"\n" + 
+					"mail.defaultSubject=default_subject(you can enter via the command prompt as well)\n" + 
+					"\n" + 
+					"mail.defaultBody=default_body(you can enter via the command prompt as well)\n" + 
+					"\n" + 
+					"mail.defaultSender=default_sender(you can enter via the command prompt as well)\n" + 
+					"\n" + 
+					"preloaded=paths_to_preloaded_files_with_emails (optional)");
+			System.exit(-1);
+		}
+		String propFile = args[0];
 		System.out.println("Loading props from :" + propFile);
 		Properties props = getProperties(propFile);
 		if (props == null) {
