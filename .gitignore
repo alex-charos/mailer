@@ -1,5 +1,16 @@
 *.class
 
+# Eclipse
+.classpath
+.project
+.settings
+
+#Maven
+target
+
+#macOS
+*DS_STORE
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
